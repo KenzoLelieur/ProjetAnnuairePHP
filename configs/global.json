@@ -3,6 +3,7 @@
         "db_name": "annuaireNws",
         "host": "localhost",
         "user": "matrix",
+        "port": "3306",
         "password": "123"
     }
 }
