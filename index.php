@@ -12,7 +12,5 @@ require_once "./configs/bootstrap.php";
 </ol>
 
 
-
-
 <?php
 require_once "./includes/_footer.php";
