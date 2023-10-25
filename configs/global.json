@@ -1,6 +1,6 @@
 {
     "database": {
-        "db_name": "annuaireNws",
+        "db_name": "A2",
         "host": "localhost",
         "user": "matrix",
         "port": "3306",

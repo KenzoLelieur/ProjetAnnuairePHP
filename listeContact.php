@@ -8,19 +8,29 @@ require_once "./configs/bootstrap.php";
 <div class="container">
 
 
-<div class="containerTitleSearch">
-<div class="titleBtn">
-<H1 >Liste Conctact</H1>
-    <a href="./inscription.php" class="Btn_add"> Ajouter</a>
-</div>
-  
+    <div class="containerTitleSearch">
+    <div class="titleBtn">
+    <H1 >Liste Conctact</H1>
+        <a href="./inscription.php" class="Btn_add"> Ajouter</a>
+    </div>
+    
     
     <form action="" method="GET" class="formSearch">
         <div class="inputSearch">
         <input type="text" name="search" class="search" placeholder="rechercher">
         <input type="submit" class="Btn_add" value="rechercher">
         </div>
+    </form>
 
+    <form action="" method="GET" class="Spe">
+        <div class="inputSpe">
+        <select name="spe" class="spe">
+                    <option value="Communication digitale">Communication digitale</option>
+                    <option value="Communication graphique">Communication graphique</option>
+                    <option value="Développement web">Développement web</option>
+        </select>
+        <input type="submit" class="Btn_add" value="Trier">
+        </div>
     </form>
 </div>
 
@@ -63,6 +73,30 @@ require_once "./configs/bootstrap.php";
 
             }
 
+
+         }elseif(isset($_GET['spe'])&& !empty($_GET['spe'])){
+            $spe=$_GET['spe'];
+
+            $req= $connection->prepare("SELECT * FROM users WHERE spe=?");
+            $req->execute(array($spe));
+            $reqDatas = $req->fetchAll();
+            
+            foreach($reqDatas as $reqData){
+                ?>
+                    <tr>
+                        <td><?=$reqData['prenom']?></td>
+                        <td><?=$reqData['nom']?></td>
+                        <td><?=$reqData['mail']?></td>
+                        <td><?=$reqData['tel']?></td>
+                        <td><?=$reqData['age']?></td>
+                        <td><?=$reqData['spe']?></td>
+                        <td><a href="modifier.php?id=<?=$reqData['id']?>"><img src="images/pen.png"></a></td>
+                        <td><a href="supprimer.php?id=<?=$reqData['id']?>"><img src="images/trash.png"></a></td>
+                    </tr>
+                <?php
+
+            }
+            
 
          }else{
             $req= $connection->prepare("SELECT * FROM users WHERE 1");

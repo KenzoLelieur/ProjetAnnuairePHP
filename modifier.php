@@ -33,7 +33,7 @@ require_once "./configs/bootstrap.php";
 
                         require_once "./functions/functions.php";
                         
-                        updateUser($connection, $prenom, $nom, $mail, $tel, $age, $id);
+                        updateUser($connection, $prenom, $nom, $mail, $tel, $age, $id, $spe);
         
                     }else {
                         
@@ -61,6 +61,13 @@ require_once "./configs/bootstrap.php";
 
                 <label>âge</label>
                 <input type="number" name="age" value="<?=$reqDatas['age']?>">
+
+                <label >Spécialité envisagé</label>
+                <select name="spe">
+                    <option value="Communication digitale">Communication digitale</option>
+                    <option value="Communication graphique">Communication graphique</option>
+                    <option value="Développement web">Développement web</option>
+                </select>
 
                 <input type="submit" value="Modifier" name="button">
 

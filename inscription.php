@@ -25,7 +25,7 @@ require_once "./configs/bootstrap.php";
 
                         require_once "./functions/functions.php";
                         
-                        addUser($connection, $prenom, $nom, $mail, $tel, $age);
+                        addUser($connection, $prenom, $nom, $mail, $tel, $age, $spe);
         
                     }else {
                         $message = "Veuillez remplir tous les champs !";
@@ -52,10 +52,13 @@ require_once "./configs/bootstrap.php";
 
                 <label>âge</label>
                 <input type="number" name="age">
-                
-                <label>âge</label>
-                <input type="number" name="age">
 
+                <label >Spécialité envisagé</label>
+                <select name="spe">
+                    <option value="Communication digitale">Communication digitale</option>
+                    <option value="Communication graphique">Communication graphique</option>
+                    <option value="Développement web">Développement web</option>
+                </select>
 
                 <input type="submit" value="Ajouter" name="button">
 
