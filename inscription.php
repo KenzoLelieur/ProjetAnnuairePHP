@@ -52,6 +52,9 @@ require_once "./configs/bootstrap.php";
 
                 <label>âge</label>
                 <input type="number" name="age">
+                
+                <label>âge</label>
+                <input type="number" name="age">
 
 
                 <input type="submit" value="Ajouter" name="button">

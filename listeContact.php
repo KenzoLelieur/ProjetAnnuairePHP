@@ -5,9 +5,6 @@ require_once "./configs/bootstrap.php";
 ?>
 
 
-<?php
-echo "salutation";?>
-
 <div class="container">
 
 
@@ -35,6 +32,7 @@ echo "salutation";?>
             <th>mail</th>
             <th>téléphone</th>
             <th>Age</th>
+            <th>Spécialités</th>
             <th>Modifer</th>
             <th>Supprimer</th>
         </tr>
@@ -57,6 +55,7 @@ echo "salutation";?>
                         <td><?=$reqData['mail']?></td>
                         <td><?=$reqData['tel']?></td>
                         <td><?=$reqData['age']?></td>
+                        <td><?=$reqData['spe']?></td>
                         <td><a href="modifier.php?id=<?=$reqData['id']?>"><img src="images/pen.png"></a></td>
                         <td><a href="supprimer.php?id=<?=$reqData['id']?>"><img src="images/trash.png"></a></td>
                     </tr>
@@ -78,6 +77,7 @@ echo "salutation";?>
                         <td><?=$reqData['mail']?></td>
                         <td><?=$reqData['tel']?></td>
                         <td><?=$reqData['age']?></td>
+                        <td><?=$reqData['spe']?></td>
                         <td><a href="modifier.php?id=<?=$reqData['id']?>"><img src="images/pen.png"></a></td>
                         <td><a href="supprimer.php?id=<?=$reqData['id']?>"><img src="images/trash.png"></a></td>
                     </tr>
