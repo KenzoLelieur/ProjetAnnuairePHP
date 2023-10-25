@@ -5,7 +5,8 @@ require_once "./configs/bootstrap.php";
 ?>
 
 
-
+<?php
+echo "salutation";?>
 
 <div class="container">
 
