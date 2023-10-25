@@ -9,11 +9,15 @@
 </head>
 <body>
 
+<?php
+
+
+?>
+
     <header class="header">
         <nav>
-            <h1 class="logo">AnnuaireNws</h1>
+            <h1 class="logo"><a href="./listeContact.php" class="lien">AnnuaireNws</a></h1>
             <ul>
-                <li ><a href="">Inscription</a></li>
             
             </ul>
         </nav>

@@ -1,12 +1,31 @@
 <?php
 require_once "./includes/_header.php";
 require_once "./configs/bootstrap.php";
+
 ?>
+
+
+
 
 <div class="container">
 
-<H1>Liste Conctact</H1>
+
+<div class="containerTitleSearch">
+<div class="titleBtn">
+<H1 >Liste Conctact</H1>
     <a href="./inscription.php" class="Btn_add"> Ajouter</a>
+</div>
+  
+    
+    <form action="" method="GET" class="formSearch">
+        <div class="inputSearch">
+        <input type="text" name="search" class="search" placeholder="rechercher">
+        <input type="submit" class="Btn_add" value="rechercher">
+        </div>
+
+    </form>
+</div>
+
     
     <table>
         <tr id="items">
@@ -21,7 +40,18 @@ require_once "./configs/bootstrap.php";
 
         <?php
 
-            // Request list users
+
+         if(isset($_GET['search'])&& !empty($_GET['search'])){
+            echo "kenzo";
+            $search = $_GET['search'];
+
+            $req =$connection->prepare('SELECT * FROM users WHERE prenom LIKE '$search' OR nom LIKE '$search' ');
+            $req->execute();
+            $reqDatas = $req->fetchAll();
+
+            
+
+         }else{
             $req= $connection->prepare("SELECT * FROM users WHERE 1");
             $req->execute();
             $reqDatas = $req->fetchAll();
@@ -41,6 +71,9 @@ require_once "./configs/bootstrap.php";
                 <?php
 
             }
+         }
+
+        
         
         
         ?>

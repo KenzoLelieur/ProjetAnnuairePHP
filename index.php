@@ -5,6 +5,9 @@ require_once "./configs/bootstrap.php";
 
 <h1>Accueil</h1>
 
+<?php
+header('location:./listeContact.php')
+?>
 <ol>
     <li><a href="./inscription.php">inscription</a></li>
     <li><a href="./modifier.php">modif</a></li>
