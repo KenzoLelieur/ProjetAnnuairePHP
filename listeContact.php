@@ -5,8 +5,6 @@ require_once "./configs/bootstrap.php";
 ?>
 
 
-
-
 <div class="container">
 
 
