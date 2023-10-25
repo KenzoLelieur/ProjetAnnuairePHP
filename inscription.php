@@ -26,18 +26,8 @@ require_once "./configs/bootstrap.php";
                         require_once "./functions/functions.php";
                         
                         addUser($connection, $prenom, $nom, $mail, $tel, $age);
-
-                        //  include_once "connexion.php";
-
-                        //  $req = mysqli_query($con , "INSERT INTO users VALUES(NULL, '$prenom', '$nom','$mail', '$tel', '$age')");
-                        //  if($req){//si la requête a été effectuée avec succès , on fait une redirection
-                        //      header("location: index.php");
-                        //  }else {//si non
-                        //      $message = "Employé non ajouté";
-                        //  }
         
                     }else {
-                        //si non
                         $message = "Veuillez remplir tous les champs !";
                     }
                 }

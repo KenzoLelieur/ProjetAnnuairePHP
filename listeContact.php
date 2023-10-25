@@ -77,7 +77,6 @@ require_once "./configs/bootstrap.php";
                         <td><?=$reqData['mail']?></td>
                         <td><?=$reqData['tel']?></td>
                         <td><?=$reqData['age']?></td>
-                        <!--Nous alons mettre l'id de chaque employé dans ce lien -->
                         <td><a href="modifier.php?id=<?=$reqData['id']?>"><img src="images/pen.png"></a></td>
                         <td><a href="supprimer.php?id=<?=$reqData['id']?>"><img src="images/trash.png"></a></td>
                     </tr>
